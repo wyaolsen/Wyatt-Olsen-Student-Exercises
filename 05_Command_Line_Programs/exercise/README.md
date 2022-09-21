@@ -18,18 +18,18 @@ After completing this exercise, you'll understand:
 ## Evaluation criteria and functional requirements
 
 * The project must not have any build errors.
-* Appropriate variable names and data types are used.
+* Appropriate variable names and data types.
 * The input and output match what's stated in the following requirements.
 
 ### Temperature conversion
 
 The Fahrenheit to Celsius conversion formula is:
 
-    temperatureCelcius = (temperatureFarenheit - 32) / 1.8
+    temperatureCelsius = (temperatureFarenheit - 32) / 1.8
 
 The Celsius to Fahrenheit conversion formula is:
 
-    temperatureFarenheit = temperatureCelcius * 1.8 + 32
+    temperatureFarenheit = temperatureCelsius * 1.8 + 32
 
 Write a command-line program which prompts a user to enter a temperature, and whether it's in degrees (C)elsius or (F)ahrenheit. Convert the temperature to the opposite degrees, and display the old and new temperatures to the console.
 

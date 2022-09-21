@@ -63,7 +63,7 @@ public class BankAccountTest {
             assertTrue("BankAccount must have getter getAccountNumber(). Make sure access for the getter is public.", accountNumberGetter != null);
             assertTrue("BankAccount getter getAccountNumber() must return type String", accountNumberGetter.getReturnType() == String.class);
             assertTrue("BankAccount getter getAccountNumber() must be public.", Modifier.isPublic(accountNumberGetter.getModifiers()));
-            Method accountNumberSetter = SafeReflection.getMethod(bankAccountClass, "setAccountAccount", String.class);
+            Method accountNumberSetter = SafeReflection.getMethod(bankAccountClass, "setAccountNumber", String.class);
             assertTrue("BankAccount must not have a setter setAccountNumber(String)", accountNumberSetter == null);
 
             Method balanceGetter = SafeReflection.getMethod(bankAccountClass, "getBalance");

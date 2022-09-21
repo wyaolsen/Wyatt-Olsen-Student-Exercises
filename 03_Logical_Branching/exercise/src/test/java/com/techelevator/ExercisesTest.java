@@ -22,46 +22,54 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise01_calculateShippingTotal_1() {
-		Exercise01_ShippingTotal exercise = new Exercise01_ShippingTotal();
-
-		assertEquals("calculateShippingTotal(20) should return 10.0", 10.0, exercise.calculateShippingTotal(20), 0.001);
-		assertEquals("calculateShippingTotal(39) should return 19.5", 19.5, exercise.calculateShippingTotal(39), 0.001);
-		assertEquals("calculateShippingTotal(40) should return 20.0", 20.0, exercise.calculateShippingTotal(40), 0.001);
-		assertEquals("calculateShippingTotal(41) should return 20.75", 20.75, exercise.calculateShippingTotal(41), 0.001);
-		assertEquals("calculateShippingTotal(50) should return 27.5", 27.5, exercise.calculateShippingTotal(50), 0.001);
+	public void Exercise01_gradeTest_1() {
+		Exercise01_TestGrading exercise = new Exercise01_TestGrading();
+		assertTrue("gradeTestPassFail(100) should return true", exercise.gradeTestPassFail(100));
+		assertTrue("gradeTestPassFail(90) should return true", exercise.gradeTestPassFail(90));
+		assertTrue("gradeTestPassFail(70) should return true", exercise.gradeTestPassFail(70));
+		assertFalse("gradeTestPassFail(69) should return false", exercise.gradeTestPassFail(69));
+		assertFalse("gradeTestPassFail(60) should return false", exercise.gradeTestPassFail(60));
+		assertFalse("gradeTestPassFail(0) should return false", exercise.gradeTestPassFail(0));
 	}
 
 	@Test
-	public void Exercise01_calculateShippingTotal_2() {
-		Exercise01_ShippingTotal exercise = new Exercise01_ShippingTotal();
-
-		assertEquals("calculateShippingTotal(20, false) should return 10.0", 10.0, exercise.calculateShippingTotal(20, false), 0.001);
-		assertEquals("calculateShippingTotal(20, true) should return 9.0", 9.0, exercise.calculateShippingTotal(20, true), 0.001);
-		assertEquals("calculateShippingTotal(39, false) should return 19.5", 19.5, exercise.calculateShippingTotal(39, false), 0.001);
-		assertEquals("calculateShippingTotal(39, true) should return 17.55", 17.55, exercise.calculateShippingTotal(39, true), 0.001);
-		assertEquals("calculateShippingTotal(40, false) should return 20.0", 20.0, exercise.calculateShippingTotal(40, false), 0.001);
-		assertEquals("calculateShippingTotal(40, true) should return 18.0", 18.0, exercise.calculateShippingTotal(40, true), 0.001);
-		assertEquals("calculateShippingTotal(41, false) should return 20.75", 20.75, exercise.calculateShippingTotal(41, false), 0.001);
-		assertEquals("calculateShippingTotal(41, true) should return 18.675", 18.675, exercise.calculateShippingTotal(41, true), 0.001);
-		assertEquals("calculateShippingTotal(50, false) should return 27.5", 27.5, exercise.calculateShippingTotal(50, false), 0.001);
-		assertEquals("calculateShippingTotal(50, true) should return 24.75", 24.75, exercise.calculateShippingTotal(50, true), 0.001);
+	public void Exercise01_gradeTest_2() {
+		Exercise01_TestGrading exercise = new Exercise01_TestGrading();
+		assertEquals("gradeTestNumeric(100) should return 3", 3, exercise.gradeTestNumeric(100));
+		assertEquals("gradeTestNumeric(95) should return 3", 3, exercise.gradeTestNumeric(95));
+		assertEquals("gradeTestNumeric(90) should return 3", 3, exercise.gradeTestNumeric(90));
+		assertEquals("gradeTestNumeric(89) should return 2", 2, exercise.gradeTestNumeric(89));
+		assertEquals("gradeTestNumeric(70) should return 2", 2, exercise.gradeTestNumeric(70));
+		assertEquals("gradeTestNumeric(50) should return 2", 2, exercise.gradeTestNumeric(50));
+		assertEquals("gradeTestNumeric(49) should return 1", 1, exercise.gradeTestNumeric(49));
+		assertEquals("gradeTestNumeric(37) should return 1", 1, exercise.gradeTestNumeric(37));
+		assertEquals("gradeTestNumeric(25) should return 1", 1, exercise.gradeTestNumeric(25));
+		assertEquals("gradeTestNumeric(24) should return 0", 0, exercise.gradeTestNumeric(24));
+		assertEquals("gradeTestNumeric(12) should return 0", 0, exercise.gradeTestNumeric(12));
+		assertEquals("gradeTestNumeric(1) should return 0", 0, exercise.gradeTestNumeric(1));
+		assertEquals("gradeTestNumeric(0) should return 0", 0, exercise.gradeTestNumeric(0));
 	}
 
 	@Test
-	public void Exercise01_calculateShippingTotal_3() {
-		Exercise01_ShippingTotal exercise = new Exercise01_ShippingTotal();
-
-		assertEquals("calculateShippingTotal(20, 0) should return 10.0", 10.0, exercise.calculateShippingTotal(20, 0), 0.001);
-		assertEquals("calculateShippingTotal(20, 0.50) should return 5.0", 5.0, exercise.calculateShippingTotal(20, 0.50), 0.001);
-		assertEquals("calculateShippingTotal(39, 0) should return 19.5", 19.5, exercise.calculateShippingTotal(39, 0), 0.001);
-		assertEquals("calculateShippingTotal(39, 0.30) should return 13.65", 13.65, exercise.calculateShippingTotal(39, 0.30), 0.001);
-		assertEquals("calculateShippingTotal(40, 0) should return 20.0", 20.0, exercise.calculateShippingTotal(40, 0), 0.001);
-		assertEquals("calculateShippingTotal(40, 0.05) should return 19.0", 19.0, exercise.calculateShippingTotal(40, 0.05), 0.001);
-		assertEquals("calculateShippingTotal(41, 0) should return 20.75", 20.75, exercise.calculateShippingTotal(41, 0), 0.001);
-		assertEquals("calculateShippingTotal(41, 0.10) should return 18.675", 18.675, exercise.calculateShippingTotal(41, 0.10), 0.001);
-		assertEquals("calculateShippingTotal(50, 0) should return 27.5", 27.5, exercise.calculateShippingTotal(50, 0), 0.001);
-		assertEquals("calculateShippingTotal(50, 0.23) should return 21.175", 21.175, exercise.calculateShippingTotal(50, 0.23), 0.001);
+	public void Exercise01_gradeTest_3() {
+		Exercise01_TestGrading exercise = new Exercise01_TestGrading();
+		assertEquals("gradeTestLetter(100) should return A", 'A', exercise.gradeTestLetter(100));
+		assertEquals("gradeTestLetter(95) should return A", 'A', exercise.gradeTestLetter(95));
+		assertEquals("gradeTestLetter(90) should return A", 'A', exercise.gradeTestLetter(90));
+		assertEquals("gradeTestLetter(89) should return B", 'B', exercise.gradeTestLetter(89));
+		assertEquals("gradeTestLetter(85) should return B", 'B', exercise.gradeTestLetter(85));
+		assertEquals("gradeTestLetter(80) should return B", 'B', exercise.gradeTestLetter(80));
+		assertEquals("gradeTestLetter(79) should return C", 'C', exercise.gradeTestLetter(79));
+		assertEquals("gradeTestLetter(74) should return C", 'C', exercise.gradeTestLetter(74));
+		assertEquals("gradeTestLetter(70) should return C", 'C', exercise.gradeTestLetter(70));
+		assertEquals("gradeTestLetter(69) should return D", 'D', exercise.gradeTestLetter(69));
+		assertEquals("gradeTestLetter(65) should return D", 'D', exercise.gradeTestLetter(65));
+		assertEquals("gradeTestLetter(60) should return D", 'D', exercise.gradeTestLetter(60));
+		assertEquals("gradeTestLetter(59) should return F", 'F', exercise.gradeTestLetter(59));
+		assertEquals("gradeTestLetter(39) should return F", 'F', exercise.gradeTestLetter(39));
+		assertEquals("gradeTestLetter(25) should return F", 'F', exercise.gradeTestLetter(25));
+		assertEquals("gradeTestLetter(1) should return F", 'F', exercise.gradeTestLetter(1));
+		assertEquals("gradeTestLetter(0) should return F", 'F', exercise.gradeTestLetter(0));
 	}
 
 	@Test
@@ -99,54 +107,46 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise03_gradeTest_1() {
-		Exercise03_TestGrading exercise = new Exercise03_TestGrading();
-		assertTrue("gradeTestPassFail(100) should return true", exercise.gradeTestPassFail(100));
-		assertTrue("gradeTestPassFail(90) should return true", exercise.gradeTestPassFail(90));
-		assertTrue("gradeTestPassFail(70) should return true", exercise.gradeTestPassFail(70));
-		assertFalse("gradeTestPassFail(69) should return false", exercise.gradeTestPassFail(69));
-		assertFalse("gradeTestPassFail(60) should return false", exercise.gradeTestPassFail(60));
-		assertFalse("gradeTestPassFail(0) should return false", exercise.gradeTestPassFail(0));
+	public void Exercise03_calculateShippingTotal_1() {
+		Exercise03_ShippingTotal exercise = new Exercise03_ShippingTotal();
+
+		assertEquals("calculateShippingTotal(20) should return 10.0", 10.0, exercise.calculateShippingTotal(20), 0.001);
+		assertEquals("calculateShippingTotal(39) should return 19.5", 19.5, exercise.calculateShippingTotal(39), 0.001);
+		assertEquals("calculateShippingTotal(40) should return 20.0", 20.0, exercise.calculateShippingTotal(40), 0.001);
+		assertEquals("calculateShippingTotal(41) should return 20.75", 20.75, exercise.calculateShippingTotal(41), 0.001);
+		assertEquals("calculateShippingTotal(50) should return 27.5", 27.5, exercise.calculateShippingTotal(50), 0.001);
 	}
 
 	@Test
-	public void Exercise03_gradeTest_2() {
-		Exercise03_TestGrading exercise = new Exercise03_TestGrading();
-		assertEquals("gradeTestNumeric(100) should return 3", 3, exercise.gradeTestNumeric(100));
-		assertEquals("gradeTestNumeric(95) should return 3", 3, exercise.gradeTestNumeric(95));
-		assertEquals("gradeTestNumeric(90) should return 3", 3, exercise.gradeTestNumeric(90));
-		assertEquals("gradeTestNumeric(89) should return 2", 2, exercise.gradeTestNumeric(89));
-		assertEquals("gradeTestNumeric(70) should return 2", 2, exercise.gradeTestNumeric(70));
-		assertEquals("gradeTestNumeric(50) should return 2", 2, exercise.gradeTestNumeric(50));
-		assertEquals("gradeTestNumeric(49) should return 1", 1, exercise.gradeTestNumeric(49));
-		assertEquals("gradeTestNumeric(37) should return 1", 1, exercise.gradeTestNumeric(37));
-		assertEquals("gradeTestNumeric(25) should return 1", 1, exercise.gradeTestNumeric(25));
-		assertEquals("gradeTestNumeric(24) should return 0", 0, exercise.gradeTestNumeric(24));
-		assertEquals("gradeTestNumeric(12) should return 0", 0, exercise.gradeTestNumeric(12));
-		assertEquals("gradeTestNumeric(1) should return 0", 0, exercise.gradeTestNumeric(1));
-		assertEquals("gradeTestNumeric(0) should return 0", 0, exercise.gradeTestNumeric(0));
+	public void Exercise03_calculateShippingTotal_2() {
+		Exercise03_ShippingTotal exercise = new Exercise03_ShippingTotal();
+
+		assertEquals("calculateShippingTotal(20, false) should return 10.0", 10.0, exercise.calculateShippingTotal(20, false), 0.001);
+		assertEquals("calculateShippingTotal(20, true) should return 9.0", 9.0, exercise.calculateShippingTotal(20, true), 0.001);
+		assertEquals("calculateShippingTotal(39, false) should return 19.5", 19.5, exercise.calculateShippingTotal(39, false), 0.001);
+		assertEquals("calculateShippingTotal(39, true) should return 17.55", 17.55, exercise.calculateShippingTotal(39, true), 0.001);
+		assertEquals("calculateShippingTotal(40, false) should return 20.0", 20.0, exercise.calculateShippingTotal(40, false), 0.001);
+		assertEquals("calculateShippingTotal(40, true) should return 18.0", 18.0, exercise.calculateShippingTotal(40, true), 0.001);
+		assertEquals("calculateShippingTotal(41, false) should return 20.75", 20.75, exercise.calculateShippingTotal(41, false), 0.001);
+		assertEquals("calculateShippingTotal(41, true) should return 18.675", 18.675, exercise.calculateShippingTotal(41, true), 0.001);
+		assertEquals("calculateShippingTotal(50, false) should return 27.5", 27.5, exercise.calculateShippingTotal(50, false), 0.001);
+		assertEquals("calculateShippingTotal(50, true) should return 24.75", 24.75, exercise.calculateShippingTotal(50, true), 0.001);
 	}
 
 	@Test
-	public void Exercise03_gradeTest_3() {
-		Exercise03_TestGrading exercise = new Exercise03_TestGrading();
-		assertEquals("gradeTestLetter(100) should return A", 'A', exercise.gradeTestLetter(100));
-		assertEquals("gradeTestLetter(95) should return A", 'A', exercise.gradeTestLetter(95));
-		assertEquals("gradeTestLetter(90) should return A", 'A', exercise.gradeTestLetter(90));
-		assertEquals("gradeTestLetter(89) should return B", 'B', exercise.gradeTestLetter(89));
-		assertEquals("gradeTestLetter(85) should return B", 'B', exercise.gradeTestLetter(85));
-		assertEquals("gradeTestLetter(80) should return B", 'B', exercise.gradeTestLetter(80));
-		assertEquals("gradeTestLetter(79) should return C", 'C', exercise.gradeTestLetter(79));
-		assertEquals("gradeTestLetter(74) should return C", 'C', exercise.gradeTestLetter(74));
-		assertEquals("gradeTestLetter(70) should return C", 'C', exercise.gradeTestLetter(70));
-		assertEquals("gradeTestLetter(69) should return D", 'D', exercise.gradeTestLetter(69));
-		assertEquals("gradeTestLetter(65) should return D", 'D', exercise.gradeTestLetter(65));
-		assertEquals("gradeTestLetter(60) should return D", 'D', exercise.gradeTestLetter(60));
-		assertEquals("gradeTestLetter(59) should return F", 'F', exercise.gradeTestLetter(59));
-		assertEquals("gradeTestLetter(39) should return F", 'F', exercise.gradeTestLetter(39));
-		assertEquals("gradeTestLetter(25) should return F", 'F', exercise.gradeTestLetter(25));
-		assertEquals("gradeTestLetter(1) should return F", 'F', exercise.gradeTestLetter(1));
-		assertEquals("gradeTestLetter(0) should return F", 'F', exercise.gradeTestLetter(0));
+	public void Exercise03_calculateShippingTotal_3() {
+		Exercise03_ShippingTotal exercise = new Exercise03_ShippingTotal();
+
+		assertEquals("calculateShippingTotal(20, 0) should return 10.0", 10.0, exercise.calculateShippingTotal(20, 0), 0.001);
+		assertEquals("calculateShippingTotal(20, 0.50) should return 5.0", 5.0, exercise.calculateShippingTotal(20, 0.50), 0.001);
+		assertEquals("calculateShippingTotal(39, 0) should return 19.5", 19.5, exercise.calculateShippingTotal(39, 0), 0.001);
+		assertEquals("calculateShippingTotal(39, 0.30) should return 13.65", 13.65, exercise.calculateShippingTotal(39, 0.30), 0.001);
+		assertEquals("calculateShippingTotal(40, 0) should return 20.0", 20.0, exercise.calculateShippingTotal(40, 0), 0.001);
+		assertEquals("calculateShippingTotal(40, 0.05) should return 19.0", 19.0, exercise.calculateShippingTotal(40, 0.05), 0.001);
+		assertEquals("calculateShippingTotal(41, 0) should return 20.75", 20.75, exercise.calculateShippingTotal(41, 0), 0.001);
+		assertEquals("calculateShippingTotal(41, 0.10) should return 18.675", 18.675, exercise.calculateShippingTotal(41, 0.10), 0.001);
+		assertEquals("calculateShippingTotal(50, 0) should return 27.5", 27.5, exercise.calculateShippingTotal(50, 0), 0.001);
+		assertEquals("calculateShippingTotal(50, 0.23) should return 21.175", 21.175, exercise.calculateShippingTotal(50, 0.23), 0.001);
 	}
 
 	@Test

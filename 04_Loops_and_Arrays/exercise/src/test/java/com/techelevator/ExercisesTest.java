@@ -25,7 +25,7 @@ public class ExercisesTest {
 	private final static char LARGE_TSHIRT = 'L';
 
 	@Test
-	public void Exercise01_createOrder() {
+	public void Exercise01_01_createOrder() {
 		Exercise01_StoreOrders exercise = new Exercise01_StoreOrders();
 		assertArrayEquals("createOrder()",
 				new int[] {10, 40, 31, 41},
@@ -34,7 +34,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise01_getCalzoneSales() {
+	public void Exercise01_02_getCalzoneSales() {
 		Exercise01_StoreOrders exercise = new Exercise01_StoreOrders();
 		assertEquals("getCalzoneSales([CALZONE, SMALL_CHEESE, LARGE_CHEESE, CALZONE, SMALL_CHEESE])",
 				2,
@@ -63,7 +63,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise01_getCheesePizzaRevenue() {
+	public void Exercise01_03_getCheesePizzaRevenue() {
 		Exercise01_StoreOrders exercise = new Exercise01_StoreOrders();
 		assertEquals("getCheesePizzaRevenue([SMALL_CHEESE])",
 				8,
@@ -89,7 +89,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise02_generateSeatingChart() {
+	public void Exercise02_01_generateSeatingChart() {
 		Exercise02_BoardingGate exercise = new Exercise02_BoardingGate();
 		assertArrayEquals("generateSeatingChart(0)",
 				new boolean[] {},
@@ -112,7 +112,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise02_getAvailableSeatCount() {
+	public void Exercise02_02_getAvailableSeatCount() {
 		Exercise02_BoardingGate exercise = new Exercise02_BoardingGate();
 		assertEquals("getAvailableSeatCount([])",
 				0,
@@ -153,7 +153,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise02_getNumberOfFullRows() {
+	public void Exercise02_03_getNumberOfFullRows() {
 		Exercise02_BoardingGate exercise = new Exercise02_BoardingGate();
 		assertEquals("getNumberOfFullRows([])",
 				0,
@@ -161,6 +161,9 @@ public class ExercisesTest {
 		assertEquals("getNumberOfFullRows([false, false, false, false, false, false])",
 				2,
 				exercise.getNumberOfFullRows(new boolean[]{false, false, false, false, false, false}));
+		assertEquals("getNumberOfFullRows([false, false, false])",
+				1,
+				exercise.getNumberOfFullRows(new boolean[]{false, false, false}));
 		assertEquals("getNumberOfFullRows([false, false, false, true, true, true])",
 				1,
 				exercise.getNumberOfFullRows(new boolean[]{false, false, false, true, true, true}));
@@ -176,10 +179,13 @@ public class ExercisesTest {
 		assertEquals("getNumberOfFullRows([true, true, false, true, true, false])",
 				0,
 				exercise.getNumberOfFullRows(new boolean[]{true, true, false, true, true, false}));
+		assertEquals("getNumberOfFullRows([true, false, true, false, true, false])",
+				0,
+				exercise.getNumberOfFullRows(new boolean[]{true, false, true, false, true, false}));
 	}
 
 	@Test
-	public void Exercise03_buildOrder() {
+	public void Exercise03_01_buildOrder() {
 		Exercise03_Shirts exercise = new Exercise03_Shirts();
 		assertArrayEquals("buildOrder(()",
 				new char[] {'S', 'S', 'S', 'M', 'M', 'L'},
@@ -187,7 +193,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise03_buildBulkOrder() {
+	public void Exercise03_02_buildBulkOrder() {
 		Exercise03_Shirts exercise = new Exercise03_Shirts();
 		assertArrayEquals("buildBulkOrder((0)",
 				new char[] {},
@@ -213,7 +219,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise03_placeRequest() {
+	public void Exercise03_03_placeRequest() {
 		Exercise03_Shirts exercise = new Exercise03_Shirts();
 		assertFalse("placeRequest([])",
 				exercise.placeRequest(new char[]{}));
@@ -236,7 +242,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise04_getFirstCard() {
+	public void Exercise04_01_getFirstCard() {
 		Exercise04_Cards exercise = new Exercise04_Cards();
 		assertEquals("getFirstCard([\"3-H\", \"7-H\", \"5-H\", \"8-H\", \"6-H\"])",
 				"3-H",
@@ -250,7 +256,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise04_discardFirstCard() {
+	public void Exercise04_02_discardFirstCard() {
 		Exercise04_Cards exercise = new Exercise04_Cards();
 		assertArrayEquals("discardFirstCard([\"3-H\", \"7-H\", \"5-H\", \"8-H\", \"6-H\"])",
 				new String[] {"7-H", "5-H", "8-H", "6-H"},
@@ -264,7 +270,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise04_discardTopCard() {
+	public void Exercise04_03_discardTopCard() {
 		Exercise04_Cards exercise = new Exercise04_Cards();
 		assertArrayEquals("discardTopCard([\"8-D\", \"10-H\", \"J-C\", \"8-D\", \"6-S\", \"Q-C\", \"2-D\"])",
 				new String[] {"10-H", "J-C", "8-D", "6-S", "Q-C", "2-D"},
@@ -281,7 +287,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise05_belowFreezing() {
+	public void Exercise05_01_belowFreezing() {
 		Exercise05_Weather exercise = new Exercise05_Weather();
 		assertEquals("belowFreezing([32, 31, 30, 29, 30, 31, 32])",
 				7,
@@ -310,7 +316,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise05_hottestDay() {
+	public void Exercise05_02_hottestDay() {
 		Exercise05_Weather exercise = new Exercise05_Weather();
 		assertEquals("hottestDay([81, 93, 94, 105, 99, 95, 101, 90, 89, 92])",
 				105,
@@ -333,7 +339,7 @@ public class ExercisesTest {
 	}
 
 	@Test
-	public void Exercise05_fixTemperatures() {
+	public void Exercise05_03_fixTemperatures() {
 		Exercise05_Weather exercise = new Exercise05_Weather();
 		assertArrayEquals("fixTemperatures([33, 30, 32, 37, 44, 31, 41])",
 				new int[]{35, 30, 34, 37, 46, 31, 43},

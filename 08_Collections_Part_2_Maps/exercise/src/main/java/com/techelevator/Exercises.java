@@ -38,7 +38,7 @@ public class Exercises {
 	}
 
 	/*
-	 * Given an String item number (a.k.a. SKU), return the discount percentage if the item is on sale.
+	 * Given a String item number (a.k.a. SKU), return the discount percentage if the item is on sale.
 	 * If the item is not on sale, return 0.00.
 	 *
 	 * If the item number is empty or null, return 0.00.

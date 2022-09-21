@@ -16,7 +16,8 @@ After completing this exercise, you'll understand:
 * The project must not have any build errors.
 * Unit tests pass as expected.
 * Code uses appropriate variable names and data types.
-* Loops and arrays are used appropriately.
+* Code is in a clean, organized format.
+* Loops and arrays used appropriately.
 
 ## Getting started
 
@@ -31,12 +32,13 @@ After completing this exercise, you'll understand:
 
 Before each method, there's a description of the problem you need to solve and examples with expected output. Use these examples to get an idea of the values you need to write your code around. It may help to keep track of the state of variables on a piece of paper as you work through your code.
 
-For example, in the comments before the `getCalzoneSales` method, there is a section that includes the method name, as well and the expected value that's returned for each method call. The following example shows that when the method is called with `[40, 30, 32, 40, 10]`, it returns 2, when it's called with `[30, 32, 10]`, it returns 0, and when it's called with `[]` (an empty array), it returns 0:
-    ```
-    getCalzoneSales([40, 30, 32, 40, 10]) → 2
-    getCalzoneSales([30, 32, 10]) → 0
-    getCalzoneSales([]) → 0
-    ```
+For example, in the comments before the `getCalzoneSales` method, there is a section that includes the method name, as well and the expected value that's returned for each method call. The following example shows that when the method gets called with `[40, 30, 32, 40, 10]`, it returns 2, when it's called with `[30, 32, 10]`, it returns 0, and when it's called with `[]` (an empty array), it returns 0:
+
+```java
+getCalzoneSales([40, 30, 32, 40, 10]) → 2
+getCalzoneSales([30, 32, 10]) → 0
+getCalzoneSales([]) → 0
+```
 
 ### Check test output if your tests are failing
 

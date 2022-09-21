@@ -122,6 +122,9 @@ What are Cleveland's odds of winning a championship?|Not likely*|Highly likely|F
 ```
 
 **Tips**
+* Use the `.split(String regex)` method to parse file input. The `.split` method divides a string based on the provided regular expression and returns the pieces as a `String[]`.
+  * A regular expression, or regex, is a specially formatted string that defines a search pattern. Regular expressions use some characters for special meanings, including `|`.
+  * To use a special character's literal value in Java you put a `\\` in front of it, so `.split("\\|")` divides your file input on each instance of a `|` pipe character.
 * Create a class that can hold a quiz question, its available answers, and the correct answer.
 * Try holding each quiz question in a list of quiz questions.
 

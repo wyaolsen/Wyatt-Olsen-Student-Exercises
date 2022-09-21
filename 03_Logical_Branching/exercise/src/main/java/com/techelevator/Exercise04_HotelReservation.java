@@ -12,6 +12,7 @@ public class Exercise04_HotelReservation {
     // You can use these constants in your solutions.
     private final double DAILY_RATE = 99.99;
     private final double DISCOUNT_RATE = 89.99;
+    private final int MINIMUM_NIGHTS_FOR_DISCOUNT_RATE = 3;
 
     /*
     Using the rates from above, implement the logic to determine the total amount based on 

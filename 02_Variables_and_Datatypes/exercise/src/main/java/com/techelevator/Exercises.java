@@ -327,11 +327,12 @@ public class Exercises {
 
 
 	    /* Exercise 51
-	    51. Bill and Jill are house painters. Bill can paint a 12 x 14 room in 2.15 hours, while Jill averages
-	    1.90 hours. How long will it take the two painters working together to paint 5 12 x 14 rooms?
-	    Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
+	    51. Bill and Jill are house painters. Bill can paint a standard room in 2.15 hours, while Jill averages
+	    1.90 hours. How long will it take the two painters working together to paint 5 standard rooms?
+	    Hint: Calculate the rate at which each painter can complete a room (rooms / hour), combine those rates, 
+	    and then divide the total number of rooms to be painted by the combined rate.
 	    */
-
+     
 
 	    /* Exercise 52
 	    52. Create and assign variables to hold a first name, last name, and middle initial. Using concatenation,

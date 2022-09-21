@@ -60,7 +60,9 @@ public class Exercise07_StoreHours {
 
     /*
     Shelia's Seashell Store is open between 8 am (hour 8) and 5 pm (hour 17) on Monday (day M), Wednesday (day W), and Friday (day F).
-    In the summer, the store is open until 8 pm (hour 20) on Wednesday (day W) and is also open Saturday (day S) from 9 am (hour 9) to 3 pm (hour 15).
+    In the summer, the store is open for additional hours. On Wednesday (day W) the store stays open until 8 pm (hour 20) and is also
+    open Saturday (day S) from 9 am (hour 9) to 3 pm (hour 15).
+
     Implement the logic to determine if the store is open based on the current hour, the current day, and if it's summer.
 
     Examples:

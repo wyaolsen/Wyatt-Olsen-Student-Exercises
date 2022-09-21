@@ -191,14 +191,14 @@ public class Exercises {
 	}
 
 	/*
-	 Given a string and an index, return a string length 2 starting at the given index. If the index is
-	 too big or too small to define a string length 2, use the first 2 chars. The string length will be
-	 at least 2.
+	 Given a string and an int n, return a string that starts at n and has a length of 2. Note that n may or may not be a valid
+	 location in the string. If n is too low or too high to define a string of length 2, return the string's first 2 characters.
+	 The string length will be at least 2.
 	 twoChar("java", 0) → "ja"
 	 twoChar("java", 2) → "va"
 	 twoChar("java", 3) → "ja"
 	 */
-	public String twoChar(String str, int index) {
+	public String twoChar(String str, int n) {
 		return null;
 	}
 
