@@ -3,7 +3,7 @@
 The purpose of this exercise is to provide students with the opportunity to practice and reinforce the skills they have learned during lecture related to building command line applications. In this exercise, you'll create command-line applications that:
 
    * Convert a temperature from one unit of measure to another.
-   * Convert a length from one unit of measure to another.
+   * Convert a temp from one unit of measure to another.
    * Calculate and display the Fibonacci sequence for a given number.
    * Convert a series of numbers from decimal to binary.
 

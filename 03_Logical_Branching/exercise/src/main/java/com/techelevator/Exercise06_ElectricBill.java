@@ -49,6 +49,7 @@ public class Exercise06_ElectricBill {
             if(unitsUsed > 0) {
                 return calculateElectricBill(unitsUsed) * (1 - RENEWABLE_ENERGY_DISCOUNT);
             }
+
         }
         return calculateElectricBill(unitsUsed);
     }
